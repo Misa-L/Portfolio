@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFF8E7;
+    color: #5C4033;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 80px;
+    position: sticky; 
+    top: 0;
+    background-color: #FFF8E7;
+    z-index: 1000;
+}
+
+header h2 {
+    font-size: 24px;
+    color: #FFF8E7;
+    padding: 16px 25px;
+    border: 2px solid #5C4033;
+    border-radius: 15px;
+    background-color: #5a4032;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    line-height: 1.2; /* Přidáno pro fixní výšku textu */
+    height: auto;     /* Aby se neroztahoval */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header h2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(90,64,50,0.6);
+}
+
+.nav-right {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin-top: 6px;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: #5C4033;
+    font-weight: 500;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.nav-right a:hover, .nav-right a.active {
+    border-bottom: 2px solid #5C4033;
+}
+
+main {
+    padding: 40px 50px;
+}
+
+.projects h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.project {
+    margin: 0 auto 50px auto;
+    max-width: 900px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.project h2 {
+    margin-bottom: 15px;
+    color: #5a4032;
+    transition: color 0.3s;
+}
+
+.project p {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.gallery-title {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 250px; 
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 45px;
+    z-index: 10001; 
+}
+
+.hamburger span {
+    width: 30px;
+    height: 4px;
+    background-color: #5C4033;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #FFF8E7; 
+    box-shadow: -4px 0 20px rgba(0,0,0,0.2);
+    transition: right 0.4s ease;
+    padding-top: 100px;
+    z-index: 10000; 
+}
+
+.mobile-nav.open {
+    right: 0;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+.mobile-nav li {
+    margin: 25px 0;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    font-size: 22px;
+    color: #5C4033;
+    font-weight: 600;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #5C4033;
+    z-index: 1; 
+}
+@media (max-width: 1200px) {
+    
+    .gallery, 
+    .gallery-title, 
+    img, 
+    .hero img { 
+        display: none !important; 
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    main {
+        padding: 20px;
+    }
+}
+@media (max-width: 768px) {
+    header {
+        padding: 20px 40px;
+    }
+.gallery, 
+    .gallery-title {
+        display: none;
+    }
+    header h2 {
+        margin-left: -25px;
+        margin-top: 10px;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .project {
+        padding: 20px;
+    }
+
+    .project p {
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+    }
+}

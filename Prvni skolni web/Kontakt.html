@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="kontakt.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Kontakni stranka</h1>
+    
+    <!--border by se nemel pouzivat-->
+    <table border="1" cellpadding="5" cellspacing="3"> <!--pouze kvuli ECDL-->
+    <thead> <tr>
+    <th>Jmeno</th>
+    <th>Prijmeni</th>
+    <th>Telefon</th>
+    <th>Email</th>
+    <th colspan="2">Pozice</th> <!--spojeni sloupcu bunek vedle sebe(nemuzime vzdycky psat cosplan....)-->
+
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+        <td>Ondrej</td>
+        <td align = "center">Petera</td>
+        <td rowspan ="3">+420 009 110 821</td> <!--spoji bunky pod sebou-->
+        <td>petera.ondrej@ssakhk.cz</td>
+        <td colspan="2">Ucitel</td>
+
+    </tr>
+
+      <tr>
+        <td>Jan</td>
+        <td>Novak</td>
+        <!-- <td>+420 009 110 821</td> -->
+        <td>jan.novak@ssakhk.cz</td>
+        <td>Manazer</td>
+        <td>Rabotaha</td>
+
+    </tr>
+
+      <tr>
+        <td>Mykhaylo</td>
+        <td>Nighaylo</td>
+        <!-- <td>+420 009 110 821</td> -->
+        <td>nyghaylo.loyka@ssakhk.cz</td>
+        <td>Sexy muz na kyberne</td>
+        <td>It technik</td>
+    </tr>
+    </tbody>
+    
+    <form>
+      <label>Krestni jmeno: </label>
+    <input types="text" name="firstname" id="nameInput"/>
+    <label for="childId">Pocet deti: </label>
+    <input type="number" min="0" max="10" step="1" name="countodchild" id="childId"/>
+     <label>Datum narozeni: </label>
+    <input type="month"/>
+
+    <label>Email:
+     <input type ="email" name="email" id="emailInput"/>
+    </label>
+     <label>Tel. cislo:
+     <input type ="tel" name="tel" id="TelInput"/>
+    </label>
+    
+    <label>Souhlasim s newsletterem:
+      <input type="  " name="newsletterem" id="CheckInput"/>
+    </label>
+      <label>Souhlasim s podminkami:
+      <input type="checkbox" name="newsletterem" id="CheckInput"/>
+    </label>  <label>Budu platit  50000kc
+            <input type="checkbox" name="newsletterem" id="CheckInput"/>
+    </label>
+    </form>
+    <h3>Pohlaví: </h3>
+        <label>
+            Muž:
+            <input type="radio" name="gender" id="genderInput" required />
+        </label>
+
+        <label>
+            Žena:
+            <input type="radio" name="gender" id="genderInput" required />
+        </label> <br />
+
+        <label>Příjem domácnosti:
+            0<input type="range" min="0" max="500000" step="10000" name="rangeInput" id="rangeInput" required />500000
+        </label> <br />
+
+        <label>Vaše zpráva:
+            <textarea name="message" id="messageInput" rows="20" cols="100" required></textarea> <br />
+        </label>
+
+        <select name="job" id="jobSelect" required>
+            <option value="0" disabled>--- Vyberte ---</option>
+            <option value="1">Učitel</option>
+            <option value="2">Programátor</option>
+            <option value="3">Povoláním syn</option>
+        </select> <br />
+
+        <input type="file" multiple accept="image/*" />
+
+        <input type="color" /> <br />
+
+        <button type="reset">Resetovat na výchozí</button>
+        <button type="submit">Odeslat formulář</button> <!-- alternativa: <input type="submit" value="Odeslat formulář" /> -->
+    </form>
+
+
+    </table>
+    <a href = "index.html">Zpet na hlavni</a>
+</body>
+</html>

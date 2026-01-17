@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects</title>
+<link rel="stylesheet" href="CSS/projects.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+        <!-- hamburger (jen mobil) -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- mobilní menu -->
+    <nav class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <a href="index.html"><h2>Portfolio</h2></a>
+
+    <nav class="navbar">
+        <div class="nav-left"></div>
+        <ul class="nav-right">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="projects">
+        <h1>Projects</h1>
+
+        <div class="project">
+            <h2>Sourbay</h2>
+            <p>This is my friend’s music streaming platform, which is designed to be very similar to Spotify in its functionality and user experience. I personally implemented a sophisticated algorithm using ASP.NET Core, which allows for efficient processing and analysis of large amounts of song data. The algorithm works by first collecting song information, such as genre, lyrics, energy level, tempo, mood, and many other features—over 500 in total. Then, it analyzes this data using various methods, such as pattern recognition and feature weighting, to create detailed song profiles and recommendations. This system can automatically suggest songs that match a listener’s preferences, mood, or listening history, making the platform feel highly personalized and dynamic.
+
+Our development team is constantly looking for ways to optimize the database performance to ensure that music playback remains seamless even under heavy server load. My friend is responsible for working on both the frontend and backend development of the homepage. He also provides guidance and teaches a lot about animations, backend functions, and integrating various features into the website. Meanwhile, other team members contribute by working on different parts of the platform, including the music bar, user login and registration systems, and overall design elements, ensuring that both functionality and user experience are smooth and attractive. This is still the very beginning of the project, but we are working hard, constantly improving the platform, and I am very optimistic that we will eventually complete it successfully.</p>
+        </div>
+
+        <div class="project">
+            <h2>This portfolio</h2>
+            <p>My personal portfolio is the first professional website I created using HTML and CSS. Although given one month, I finished it in one week through focused effort and detailed planning. Despite being my first project, I ensured a clean, professional, and navigable design by studying layout, typography, and responsive structures for desktops, tablets, and mobile phones. I specifically focused on the user interface to make sure that the site reflects my personality and technical skills clearly.
+
+I plan to upgrade this site soon with creative ideas and new features. Improvements will include interactive elements, custom JavaScript animations, better navigation menus, and advanced technologies to make it more functional and engaging. I will also add organized sections for projects, skills, and achievements so visitors better understand my professional work. Ultimately, this portfolio will serve as a showcase of my abilities and a platform that grows with me, reflecting my learning process, creativity, and continuous improvement in web development. I look forward to expanding my digital presence as I gain more experience in the field.</p>
+        </div>
+
+<h2 class="gallery-title">Gallery</h2>
+        <div class="gallery">
+            <img src="images/photo_2026-01-15_20-05-48.jpg" alt="Gallery Image 1">
+            <img src="images/SBnotesTest2.png" alt="Gallery Image 2">
+            <img src="images/photo_2026-01-15_20-05-03.jpg" alt="Gallery Image 3">
+           
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Semester Project – Mykhaylo Loyka</p>
+</footer>
+
+<script>
+    const hamburger = document.getElementById("hamburger");
+    const mobileNav = document.getElementById("mobileNav");
+
+    hamburger.addEventListener("click", () => {
+        mobileNav.classList.toggle("open");
+    });
+</script>
+</body>
+</html>

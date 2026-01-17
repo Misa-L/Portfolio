@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#row:first-child { /* alternativa: last-child*/
+    background-color: lightgray;
+}
+
+tbody:nth-child(2) {
+    background-color: lime;
+}
+
+input {
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    border: 2px solid gray;
+    color: rgb(100, 99, 99);
+    font-size: 15px;
+}
+
+input[name="countofchilds"] { /* nebo jednodušeji podle ID */
+    width: 70px;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    width: 20px;
+    height: 20px;
+}
+
+button:hover {
+    background-color: cyan;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input:focus {
+    background-color: lightskyblue;
+    border: 2px solid black;
+}
+
+/** Navštívený odkaz */
+a:visited {
+    color: purple;
+    font-size: 10px;
+}
+
+/** Nenavštívený odkaz */
+a:link {
+    color: blue;
+    font-size: 20px;
+}
+
+input:not(:focus) { /* => je možné zvolit třeba prvek, který není v konkrétní třídě :has */
+    background-color: lightyellow;
+}
+
+input:checked { /* input[checked="true"] */
+    outline: 3px solid orange;
+}
+
+/* Pseudoelementy */
+/* VIRTUÁLNÍ SPAN PŘED PRVKEM*/
+#labelEmail::before {
+    content: "📧 ";
+}
+
+/* VIRTUÁLNÍ SPAN PO PRVKU */
+#labelEmail::after {
+    content: "(povinné)";
+    font-weight: 900;
+}

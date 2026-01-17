@@ -1,0 +1,189 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ h1,h2,h3,h4,h5,h6 {
+   margin: 10px 0; /*(TOP-BOTTOM) (LEFT-RIGHT)*/
+ }
+ 
+ p {
+        background-color: rgb(60, 60, 194); /*#3c3cc2*/
+        width: 100ch;
+        padding: 15px;
+    }
+  
+    ul,ol{
+      padding-left: 20px;
+    }
+dl
+{
+  padding:5px;
+  border: 2px groove blueviolet;
+  width: 50%;
+  margin: 5px;
+  background-color: blanchedalmond-;
+ /* border-style: groove;
+  border-width: 2px;
+  border-color: blueviolet;*/
+}
+dt{
+border-bottom: 1px solid gray;
+}
+dd{
+  padding: 5px 0 10px 10px;/*T R B L*/
+}
+
+.halfDiv
+{
+  background-color: rgb(149, 77, 225);
+  width:90%;
+  padding: 10px;
+  margin: 10px 20px;
+}
+
+
+.box1, .box2, .box3, .box4, .box5
+{
+  background-color: brown;
+  margin: 5px;
+
+}
+
+.box1
+{
+  width: 50%; /*procenta se vztahuji na sirku vuci rodici*/
+}
+
+.box2
+{
+width: 50vw;/*procenta se vztahuji k sirce viewportu(vuci cele strance)*/
+/*height: 10vh; procenta se vztahuji k sirce viewportu(vuci cele strance)*/
+}
+.box3
+{
+  max-width: 50%;
+  width: fit-content; /*zaber to co potrebujes*/
+}
+.box4
+{
+  min-width: 50%;
+  width: fit-content;
+}
+.box5
+{
+  max-width: 100ch;
+  width: fit-content;
+  text-align: justify;/*text do bloku*/
+}
+/*h3, ktere jsou v .halfDiv*/
+.halfDiv h3
+{
+  color: rgb(255, 255, 255);
+  background-color: black;
+  text-align: right;
+}
+/*h3, ktere jsou primy potomky*/
+.halfDiv > h3
+{
+text-align: center;
+}
+.colorText
+{
+  color: rgb(255, 239, 239);
+  font-size: 25px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#columnsDiv
+{
+  background-color: chartreuse;
+  height: 500px;
+  display: flex;
+  flex-direction: row;/*vychozi nastaveni, da prvky vedle sebe*/
+  align-items : center;/*pohyb po ose Y(PRI FLEX-DIRECTION: ROW)*/
+  justify-content: center;/*pohyb po ose X(PRI FLEX-DIRECTION: ROW)*/
+  gap:20px;/*odsazeni*/
+  flex-wrap: wrap;
+  /* visibility: hidden;*/
+
+}
+
+#columnsDiv > div 
+{
+  width: 300px;
+  height: 200px;
+  background-color: blueviolet;
+  padding: 5px;
+  border: 1px dashed black;
+  border-radius: 10px;
+}
+#columnsDiv > div:first-of-type
+{
+  background-color: rgb(255, 0, 0);
+
+}
+#columnsDiv img
+{
+  width: 75%;
+  height: auto;
+}
+
+.imgText
+{
+  margin-top: 20px;
+  display: flex;
+  background-color: aqua;
+  gap: 10px;
+}
+.imgText > .leftDiv
+{
+background-color: chocolate;
+width: 500px;
+}
+.imgText > .rightDiv
+{
+background-color: chocolate;
+padding: 10px;
+width: 200px;/*sirka se ignoruje pri grow a shrink*/
+flex-grow: 1;
+flex-shrink: 1;
+/*flex: 1; => flex-grow:1; flex-shrink:1*/
+}
+.imgText > .rightDiv > img
+{
+  width: 100%;
+  height: auto;
+}
+.growShrinkDiv
+{
+  margin-top: 20px;
+  background-color: blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.growShrinkDiv > div
+{
+  background-color: darkslategray;
+  padding: 10px;
+  flex-basis: 200px;
+}
+.growShrinkDiv > .defaultDiv
+{
+flex-basis: 500px;
+}
+.growShrinkDiv > .growDiv
+{
+  order: 3; /*posunuti prvku na konec(treti v poradi)*/
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.growShrinkDiv > .shrinkDiv
+{
+  flex-grow: 0;
+  flex-shrink: 1;
+}

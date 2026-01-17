@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFF8E7;
+    color: #5C4033;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 80px;
+    position: sticky;
+    top: 0;
+    background-color: #FFF8E7;
+    z-index: 100;
+}
+
+header h2 {
+    font-size: 24px;
+    color: #FFF8E7;
+    padding: 12px 25px;
+    border: 2px solid #5C4033;
+    border-radius: 15px;
+    background-color: #5a4032;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+header h2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(90, 64, 50, 0.6);
+    border-color: #5a4032;
+}
+
+.nav-left,
+.nav-center,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 6px;
+}
+
+.nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-right {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: #5C4033;
+    font-weight: 500;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.nav-right a:hover,
+.nav-right a.active {
+    border-bottom: 2px solid #5C4033;
+}
+
+main {
+    padding: 60px 50px;
+}
+
+.skills h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.skills-box {
+    width: 70%;
+    margin: auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.skill {
+    margin-bottom: 30px;
+}
+
+.skill span {
+    display: inline-block;
+    width: 49%;
+}
+
+.bar {
+    background-color: #eee;
+    height: 12px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.bar div {
+    height: 100%;
+    background: linear-gradient(to right, #5a4032, #8b6a4f);
+    border-radius: 10px;
+}
+
+footer {
+    position: relative;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #5C4033;
+    background-color: transparent;
+    z-index: 1;
+    margin-top: 41px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: #5C4033;
+    border-radius: 2px;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #FFF8E7;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+    transition: right 0.4s ease;
+    padding-top: 100px;
+    z-index: 9999;
+
+}
+
+.mobile-nav.open {
+    right: 0;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+.mobile-nav li {
+    margin: 20px 0;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #5C4033;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 45px;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 4px;
+    background-color: #5C4033;
+}
+
+@media (max-width: 1024px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        position: relative;
+    }
+
+    main {
+        flex: 1;
+    }
+
+    footer {
+        margin-top: -40px;
+        position: relative;
+        bottom: auto;
+        z-index: 100;
+    }
+
+    .mobile-nav {
+        z-index: 300;
+    }
+}
+
+@media (max-width: 768px) {
+    header h2 {
+        margin-left: -65px;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .skills-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .skill span {
+        width: 100%;
+        display: block;
+        text-align: left;
+    }
+
+    .skill span:nth-child(2) {
+        text-align: right;
+        margin-top: -24px;
+    }
+
+    footer {
+        z-index: 1;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: left;
+    }
+
+    img {
+        display: none;
+    }
+
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+    }
+
+    .mobile-nav.open {
+        right: 0;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+}

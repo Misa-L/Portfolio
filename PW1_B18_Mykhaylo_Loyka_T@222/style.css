@@ -1,0 +1,79 @@
+/* RESET – povinné školní pravidlo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Základ stránky */
+body {
+    color: #5C4033;
+    background-color: #FFF8E7;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+}
+h3
+{
+    position: relative;
+    top: -50px;
+   
+}
+/* Odstavce – práce s šířkou a paddingem */
+p {
+    width: 50ch;          /* rozumná šířka textu */
+    padding: 0px;
+}
+
+/* NAVBAR */
+header {
+    background-color: #FFF8E7;
+    padding: 20px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5C4033;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #0056b3;
+}
+
+/* HLAVNÍ OBSAH */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;   /* odsazení od navbaru */
+    gap: 20px;           /* mezera mezi sekcemi */
+    font-weight: bold;
+ 
+}
+
+/* HERO SEKCE */
+.main {
+    max-width: 700px;
+    text-align: center;
+    margin-top: 200px ;  
+    margin-right: auto;
+    padding: 50px;
+}
+img
+{
+position: relative;
+left:500px;
+top: -250px;
+width: 300px;
+height: 300px;
+}

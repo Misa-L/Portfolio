@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="CSS/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <!-- hamburger (jen mobil) -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- mobilní menu -->
+        <nav class="mobile-nav" id="mobileNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Me</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="index.html">
+            <h2>Portfolio</h2>
+        </a>
+
+        <nav class="navbar">
+            <div class="nav-left"></div>
+            <ul class="nav-right">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact">
+            <h1>Contact Me</h1>
+
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+420 123 456 789">
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="1" placeholder="Your age">
+
+                <label for="date">Date of contact:</label>
+                <input type="date" id="date" name="date">
+
+                <fieldset>
+                    <legend>Preferred contact method:</legend>
+                    <label><input type="radio" name="preferred_contact" value="email" required> Email</label>
+                    <label><input type="radio" name="preferred_contact" value="phone"> Phone</label>
+                </fieldset>
+
+                <label for="reason">Reason for contact:</label>
+                <select id="reason" name="reason">
+                    <option value="project">Project</option>
+                    <option value="question">Question</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <fieldset>
+                    <label><input type="checkbox" name="terms" required> I agree with the terms</label>
+                </fieldset>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..."
+                    required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Semester Project – Mykhaylo Loyka</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const mobileNav = document.getElementById("mobileNav");
+
+        hamburger.addEventListener("click", () => {
+            mobileNav.classList.toggle("open");
+        });
+    </script>
+</body>
+
+</html>
